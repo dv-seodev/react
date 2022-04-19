@@ -1,6 +1,8 @@
+import classes from "./Profile.module.css"
+
 function Profile() {
     return (
-        <div className='content'>
+        <div className={classes.content}>
             <img src="https://s1.1zoom.me/big3/81/Russia_Mountains_Lake_469922.jpg"></img>
 
             <div>
@@ -12,10 +14,10 @@ function Profile() {
                     New post
                 </div>
                 <div>
-                    <div>
+                    <div className={classes.item}>
                         Post 1
                     </div>
-                    <div>
+                    <div className={classes.item}>
                         Post 2
                     </div>
                 </div>
