@@ -4,11 +4,9 @@ import classes from "./Profile.module.css"
 function Profile() {
     return (
         <div className={classes.content}>
-            <img src="https://s1.1zoom.me/big3/81/Russia_Mountains_Lake_469922.jpg"></img>
-            <div>
-                ava + description
-            </div>
-        <MyPosts />
+            <img src="https://s1.1zoom.me/big3/81/Russia_Mountains_Lake_469922.jpg" alt="content"></img>
+            <div>ava + description</div>
+            <MyPosts />
         </div>
     );
 }
