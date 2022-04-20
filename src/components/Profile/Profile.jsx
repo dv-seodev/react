@@ -6,7 +6,7 @@ function Profile() {
     return (
         <div>
             <img src="https://s1.1zoom.me/big3/81/Russia_Mountains_Lake_469922.jpg" alt="content"></img>
-            <div>ava + description</div>
+            <div className={classes.descriptionBlock}>ava + description</div>
             <MyPosts />
         </div>
     );

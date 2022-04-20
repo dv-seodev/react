@@ -2,24 +2,36 @@ import React from 'react'
 import classes from "./Dialogs.module.css"
 import { NavLink } from 'react-router-dom';
 
+function DialogItem(props) {
+    return (
+        <div className={classes.dialog}><NavLink to={"/dialogs/" + props.id}>{props.name}</NavLink></div>
+    );
+}
+
+function MessageItem(props) {
+    return (
+        <div className={classes.message}>{props.text}</div>
+    );
+}
+
 function Dialogs() {
     return (
             <div className={classes.dialogs}>
                 <div className={classes.dialogItems}>
-                    <div className={classes.dialog + " " + classes.active}><NavLink to="/dialogs/1">Name 1</NavLink></div>
-                    <div className={classes.dialog}><NavLink to="/dialogs/2">Name 2</NavLink></div>
-                    <div className={classes.dialog}><NavLink to="/dialogs/3">Name 3</NavLink></div>
-                    <div className={classes.dialog}><NavLink to="/dialogs/4">Name 4</NavLink></div>
-                    <div className={classes.dialog}><NavLink to="/dialogs/5">Name 5</NavLink></div>
-                    <div className={classes.dialog}><NavLink to="/dialogs/6">Name 6</NavLink></div>
+                    <DialogItem name="Dmitriy" id="1" />
+                    <DialogItem name="Valentin" id="2" />
+                    <DialogItem name="Anton" id="3" />
+                    <DialogItem name="Viktor" id="4" />
+                    <DialogItem name="Andrey" id="5" />
+                    <DialogItem name="German" id="6" />
                 </div>
                 <div className={classes.messages}>
-                    <div className={classes.message}>hi</div>
-                    <div className={classes.message}>lol</div>
-                    <div className={classes.message}>yo</div>
-                    <div className={classes.message}>bonjure</div>
-                    <div className={classes.message}>hi</div>
-                    <div className={classes.message}>privet</div>
+                    <MessageItem text="hello" />
+                    <MessageItem text="hi" />
+                    <MessageItem text="privet" />
+                    <MessageItem text="lol" />
+                    <MessageItem text="aloha" />
+                    <MessageItem text="yo" />
                 </div>
             </div>
     );
