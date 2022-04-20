@@ -14,24 +14,34 @@ function MessageItem(props) {
     );
 }
 
+let dialogsData = [
+    {id: 1, name: 'Dmitriy'},
+    {id: 2, name: 'Valentin'},
+    {id: 3, name: 'Anton'},
+    {id: 4, name: 'Viktor'},
+    {id: 5, name: 'Andrey'},
+    {id: 6, name: 'German'}
+]
+
+let messagesData = [
+    {id: 1, text: 'hello'},
+    {id: 2, text: 'hi'},
+    {id: 3, text: 'privet'},
+    {id: 4, text: 'lol'},
+    {id: 5, text: 'aloha'},
+    {id: 6, text: 'yo'}
+]
+
 function Dialogs() {
     return (
             <div className={classes.dialogs}>
                 <div className={classes.dialogItems}>
-                    <DialogItem name="Dmitriy" id="1" />
-                    <DialogItem name="Valentin" id="2" />
-                    <DialogItem name="Anton" id="3" />
-                    <DialogItem name="Viktor" id="4" />
-                    <DialogItem name="Andrey" id="5" />
-                    <DialogItem name="German" id="6" />
+                    <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+                    <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
                 </div>
                 <div className={classes.messages}>
-                    <MessageItem text="hello" />
-                    <MessageItem text="hi" />
-                    <MessageItem text="privet" />
-                    <MessageItem text="lol" />
-                    <MessageItem text="aloha" />
-                    <MessageItem text="yo" />
+                    <MessageItem text={messagesData[0].text} />
+                    <MessageItem text={messagesData[1].text} />
                 </div>
             </div>
     );
