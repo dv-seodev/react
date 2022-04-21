@@ -7,7 +7,6 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +17,9 @@ function App() {
           <Routes>
             <Route path="/dialogs/*" element={<Dialogs />} />
             <Route path="/profile/*" element={<Profile />} />
+
+            {/* <Route path="/dialogs/*" render={ () => <Dialogs />} />
+            <Route path="/profile/*" render={ () => <Profile />} /> */}
           </Routes>
         </div>
       </div>

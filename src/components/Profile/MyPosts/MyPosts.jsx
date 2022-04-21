@@ -13,6 +13,8 @@ function MyPosts() {
         {id: 6, message: 'sixth'}
     ]
 
+    let postsElements = postsData.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
+
     return (
         <div>
             my posts
@@ -20,8 +22,7 @@ function MyPosts() {
             <textarea></textarea>
             <button>add post</button>
             <div className={classes.messages}>
-            <Post message={postsData[0].message} likesCount={postsData[0].likesCount} />
-            <Post message={postsData[1].message} likesCount={postsData[1].likesCount} />
+            {postsElements}
             </div>
         </div>
     );
