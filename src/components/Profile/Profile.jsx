@@ -7,7 +7,7 @@ function Profile(props) {
         <div>
             <img src="https://s1.1zoom.me/big3/81/Russia_Mountains_Lake_469922.jpg" alt="content"></img>
             <div className={classes.descriptionBlock}>ava + description</div>
-            <MyPosts posts={props.state.posts} />
+            <MyPosts posts={props.state.posts} addPost={props.addPost}/>
         </div>
     );
 }
